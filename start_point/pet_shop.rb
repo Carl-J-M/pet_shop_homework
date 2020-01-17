@@ -23,3 +23,14 @@ end
 def stock_count(pet_shop_hash)
     return pet_shop_hash[:pets].length
 end
+
+def pets_by_breed(pet_shop_hash, breed)
+  pet_array = pet_shop_hash[:pets]
+  total_of_breed = []
+  for pet in pet_array
+    if pet[:breed] == breed
+      total_of_breed.push(breed)
+    end
+  end
+  return total_of_breed
+end
