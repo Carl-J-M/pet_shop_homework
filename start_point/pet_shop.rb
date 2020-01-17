@@ -34,3 +34,26 @@ def pets_by_breed(pet_shop_hash, breed)
   end
   return total_of_breed
 end
+
+def find_pet_by_name(pet_shop_hash, pet_name)
+
+  for pet in pet_shop_hash[:pets]
+      if pet[:name] == pet_name
+          return pet
+      end
+  end
+  return nil
+end
+
+def remove_pet_by_name(pet_shop_hash, name)
+    for pet in pet_shop_hash[:pets]
+      if pet[:name] == name
+        pet_shop_hash.delete_at(pet.index)
+      end
+    end
+end
+
+def add_pet_to_stock(pet_shop_hash, new_pet)
+  pet_shop_hash[:pets].push(new_pet)
+  return pet_shop_hash[:pets].length
+end
