@@ -57,3 +57,7 @@ def add_pet_to_stock(pet_shop_hash, new_pet)
   pet_shop_hash[:pets].push(new_pet)
   return pet_shop_hash[:pets].length
 end
+
+def customer_cash(customer_hash)
+  return customer_hash[:cash]
+end
