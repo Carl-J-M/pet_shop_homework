@@ -45,10 +45,10 @@ def find_pet_by_name(pet_shop_hash, pet_name)
   return nil
 end
 
-def remove_pet_by_name(pet_shop_hash, name)
+def remove_pet_by_name(pet_shop_hash, pet_name)
     for pet in pet_shop_hash[:pets]
-      if pet[:name] == name
-        pet_shop_hash.delete_at(pet.index)
+      if pet[:name] == pet_name
+      pet_shop_hash[:pets].delete_at(pet_shop_hash[:pets].index(pet))
       end
     end
 end
