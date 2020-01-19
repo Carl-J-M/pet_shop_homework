@@ -78,5 +78,7 @@ end
 def customer_can_afford_pet(customer_hash, new_pet_hash)
   if customer_hash[:cash] >= new_pet_hash[:price]
       return true
-  end
+  else
+      return false
+    end
 end
